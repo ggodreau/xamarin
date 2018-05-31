@@ -17,9 +17,5 @@ namespace myApp
 			InitializeComponent ();
 		}
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            DisplayAlert("myTitle", "myMessage", "OK", "notOK");
-        }
     }
 }
