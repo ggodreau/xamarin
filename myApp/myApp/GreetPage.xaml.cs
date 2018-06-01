@@ -15,7 +15,12 @@ namespace myApp
 		public GreetPage ()
 		{
 			InitializeComponent ();
+            mySlider.Value = 0.5;
 		}
 
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            myLabel.Text = string.Format("Newest value is: {0:F2}", e.NewValue);
+        }
     }
 }

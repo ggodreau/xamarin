@@ -185,3 +185,4 @@ FakesAssemblies/
 .DS_Store
 *.pdf
 .vs/myApp/v15/Server/sqlite3/db.lock
+.vs

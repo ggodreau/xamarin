@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myApp.GreetPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Sup werld" />
-        <Slider />
+        <Label Text="Sup werld" x:Name="myLabel"/>
+        <Slider ValueChanged="Slider_ValueChanged" x:Name="mySlider"/>
     </StackLayout>
 </ContentPage>
