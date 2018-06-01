@@ -6,6 +6,8 @@
         <Label Text="{Binding Source={Reference mySlider}, 
             Path=Value, 
             StringFormat='Value is {0:F2}' }" 
+            Opacity="{Binding Source={Reference mySlider},
+            Path=Value}"
             x:Name="myLabel"/>
         <Slider x:Name="mySlider"/>
     </StackLayout>
