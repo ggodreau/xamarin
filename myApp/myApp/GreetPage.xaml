@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myApp.GreetPage">
     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0, 20, 0, 0"
-                    Android="0, 40, 0, 0">
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="Android" Value="0, 40, 0, 0" />
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
