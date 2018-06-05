@@ -17,6 +17,5 @@ namespace myApp
 			InitializeComponent ();
             mySlider.Value = 0.5;
 		}
-
     }
 }
