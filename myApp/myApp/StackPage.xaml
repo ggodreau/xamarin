@@ -1,27 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="myApp.StackPage">
+             x:Class="myApp.StackPage"
+             BackgroundColor="#127ac7">
+             <!--
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0, 20, 0, 0" />
             <On Platform="Android" Value="0, 0, 0, 0" />
         </OnPlatform>
     </ContentPage.Padding>
-<StackLayout 
-    Padding="20, 20, 20, 20" 
-    Spacing="3"
-    Orientation="Vertical"
-    VerticalOptions="EndAndExpand"
-    BackgroundColor="Goldenrod">
-        <Grid
-        BackgroundColor="Azure"
-        RowSpacing="30"
-        ColumnSpacing="30">
-            <Label Grid.Row="0" Grid.Column="0" Text="label1" BackgroundColor="Chartreuse" />
-            <Label Grid.Row="1" Grid.Column="0" Text="label2" BackgroundColor="Chartreuse"/>
-            <Label Grid.Row="0" Grid.Column="1" Text="label3" BackgroundColor="Chartreuse"/>
-            <Label Grid.Row="1" Grid.Column="1" Text="label4" BackgroundColor="Chartreuse"/>
-        </Grid>
+    -->
+    <StackLayout 
+        VerticalOptions="CenterAndExpand"
+        BackgroundColor="#127ac7">
+        <Label TextColor="White" Text="Welcome to Gregland" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Label TextColor="White" Text="Damn it feels good to be a gangster" FontSize="18" HorizontalOptions="Center" />
+        <Button TextColor="White" BackgroundColor="#1dabf0" Text="Login" />
+        <Button TextColor="White" BackgroundColor="#1dabf0" Text="Register" />
     </StackLayout>
 </ContentPage>
