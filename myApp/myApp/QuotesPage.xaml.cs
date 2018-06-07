@@ -14,7 +14,7 @@ namespace myApp
 	{
 
         string[] quoteList = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-        int quoteIdx = 1;
+        int quoteIdx = 0;
 
 		public QuotesPage ()
 		{
@@ -24,8 +24,16 @@ namespace myApp
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            // arrays are zero indexed, but this has 7 elements
+            if(quoteIdx >= quoteList.Length)
+            {
+                quoteIdx = 0;
+            }
             quoteText.Text = quoteList[quoteIdx];
-
+            debugText.Text = string.Format("quote len: {0}, idx: {1}",
+               quoteList.Length.ToString(),
+               quoteIdx);
+            quoteIdx += 1;
         }
     }
 }

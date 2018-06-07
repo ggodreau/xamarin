@@ -30,6 +30,11 @@
                BindingContext="{x:Reference fontSlider}"
                FontSize="{Binding Value}"
                VerticalOptions="Start" 
-               HorizontalOptions="CenterAndExpand" />
+               HorizontalOptions="Start" />
+        <Label x:Name="debugText"
+               Text="debug text"
+               FontSize="16"
+               VerticalOptions="Start" 
+               HorizontalOptions="End" />
         </StackLayout>
 </ContentPage>
