@@ -9,7 +9,12 @@ namespace myApp
 	{
 		public App ()
 		{
-			InitializeComponent();
+            // Initialize live reload maybe
+            #if DEBUG
+            LiveReload.Init();
+            #endif
+
+            InitializeComponent();
 
 			// MainPage = new GreetPage();
 			// MainPage = new QuotesPage();

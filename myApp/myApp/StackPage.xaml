@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myApp.StackPage"
-             BackgroundColor="#127ac7">
+             BackgroundColor="Black">
              <!--
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -11,12 +11,37 @@
         </OnPlatform>
     </ContentPage.Padding>
     -->
-    <StackLayout 
-        VerticalOptions="CenterAndExpand"
-        BackgroundColor="#127ac7">
-        <Label TextColor="White" Text="Welcome to Gregland" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
-        <Label TextColor="White" Text="Damn it feels good to be a gangster" FontSize="18" HorizontalOptions="Center" />
-        <Button TextColor="White" BackgroundColor="#1dabf0" Text="Login" />
-        <Button TextColor="White" BackgroundColor="#1dabf0" Text="Register" />
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="DarkSlateGray">
+        <StackLayout
+            Orientation="Vertical"
+            Padding="20, 0, 20, 0"
+            BackgroundColor="Black">
+            <Label Text="douchebag_photography"
+                   TextColor="LightGray" 
+                   HorizontalOptions="Start" 
+                   Margin="10"
+                   FontSize="20"/>
+        </StackLayout>
+        <Image Source="http://lorempixel.com/1920/1080/nature/3/" />
+        <StackLayout
+            Orientation="Horizontal"
+            Padding="20, 0, 20, 0"
+            BackgroundColor="Black">
+            <Button Text="Like" BackgroundColor="Black" TextColor="LightGray" BorderColor="Black"/>
+            <Button Text="Comment" BackgroundColor="Black" TextColor="LightGray" BorderColor="Black" />
+            <Button Text="Share" BackgroundColor="Black" TextColor="LightGray" BorderColor="Black"/>
+        </StackLayout>
+        <StackLayout
+            Orientation="Vertical"
+            Padding="20, 0, 20, 0"
+            BackgroundColor="Black">
+            <BoxView Color="#f0f0f0" HeightRequest="1" />
+            <Label Text="700 likes" TextColor="LightGray" FontAttributes="Bold" />
+            <Label Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple days of work in Denmark."
+                   TextColor="LightGray"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
