@@ -1,3 +1,3 @@
 Making sick nasty apps... like dis:
 
-![sickness](assets/1.jpg)
+![sickness](assets/1.jpg | width=150)
