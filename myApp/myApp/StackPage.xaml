@@ -14,13 +14,13 @@
     <StackLayout
         Orientation="Vertical"
         HorizontalOptions="FillAndExpand"
-        BackgroundColor="DarkSlateGray">
+        BackgroundColor="Black">
         <StackLayout
             Orientation="Vertical"
             Padding="20, 0, 20, 0"
             BackgroundColor="Black">
-            <Label Text="douchebag_photography"
-                   TextColor="LightGray" 
+            <Label Text="atx_photography"
+                   TextColor="White" 
                    HorizontalOptions="Start" 
                    Margin="10"
                    FontSize="20"/>
@@ -40,7 +40,7 @@
             BackgroundColor="Black">
             <BoxView Color="#f0f0f0" HeightRequest="1" />
             <Label Text="700 likes" TextColor="LightGray" FontAttributes="Bold" />
-            <Label Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple days of work in Denmark."
+            <Label Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple days of work in Denmark. Douches."
                    TextColor="LightGray"/>
         </StackLayout>
     </StackLayout>
