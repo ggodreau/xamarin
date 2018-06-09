@@ -8,12 +8,14 @@
     <Compile Remove="GreetPage.xaml.cs" />
     <Compile Remove="MainPage.xaml.cs" />
     <Compile Remove="QuotesPage.xaml.cs" />
+    <Compile Remove="StackPage.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="GreetPage.xaml" />
     <EmbeddedResource Remove="MainPage.xaml" />
     <EmbeddedResource Remove="QuotesPage.xaml" />
+    <EmbeddedResource Remove="StackPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="StackPage.xaml">
+    <EmbeddedResource Update="RelativePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

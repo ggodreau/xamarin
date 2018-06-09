@@ -18,7 +18,7 @@ namespace myApp
 
 			// MainPage = new GreetPage();
 			// MainPage = new QuotesPage();
-			MainPage = new StackPage();
+			MainPage = new RelativePage();
 		}
 
 		protected override void OnStart ()

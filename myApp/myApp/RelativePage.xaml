@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myApp.RelativePage">
+    <RelativeLayout>
+        <BoxView Color="Aqua"
+                 x:Name="aquaBox"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression 
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}"
+
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Height,
+                    Factor=0.3 }" />
+
+        <!-- height of the aquaBox (Factor=1) plus 20 units (Constant) -->
+        <Image Source="https://avatarfiles.alphacoders.com/344/thumb-34438.gif" 
+                HeightRequest="100"
+                WidthRequest="100"
+                 RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=aquaBox,
+                    Property=Height,
+                    Factor=1,
+                    Constant=-50 }" 
+                 RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=aquaBox,
+                    Property=Width,
+                    Factor=0.5,
+                    Constant=-50 }"/>
+
+    </RelativeLayout>
+</ContentPage>
