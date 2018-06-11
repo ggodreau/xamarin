@@ -16,9 +16,7 @@ namespace myApp
 
             InitializeComponent();
 
-			// MainPage = new GreetPage();
-			// MainPage = new QuotesPage();
-			MainPage = new RelativePage();
+			MainPage = new ImagePage();
 		}
 
 		protected override void OnStart ()
