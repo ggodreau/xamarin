@@ -2,5 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myApp.ImagePage">
-    <Image x:Name="myImage" Aspect="AspectFill" />
+    <RelativeLayout
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="Black">
+        <ActivityIndicator
+            IsRunning="{Binding Source={x:Reference myImage}, Path=IsLoading}"
+            Color="WhiteSmoke"
+            HeightRequest="200"
+            WidthRequest="200"
+            RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=0.5,
+                Constant=-100}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.5,
+                Constant=-100}"/>
+        <!-- absolute layout to get horiz fill for landscape too -->
+        <AbsoluteLayout
+            BackgroundColor="Black"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=1}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=1}">
+            <Image 
+                x:Name="myImage" 
+                Aspect="AspectFill"
+                IsVisible="True"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"/>
+        </AbsoluteLayout>
+    </RelativeLayout>
 </ContentPage>
