@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using static myApp.AppConstants;
+
 namespace myApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,8 +17,7 @@ namespace myApp
 		public ImagePage ()
 		{
 			InitializeComponent ();
-            // pulls from local resource (folder 'images' in PCL)
-            myImage.Source = ImageSource.FromResource("myApp.images.troll.jpg");
+            myClock.Image = (FileImageSource) ImageSource.FromFile(AppConstants.ClockType);
 		}
 	}
 }
