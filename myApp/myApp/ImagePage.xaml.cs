@@ -15,15 +15,8 @@ namespace myApp
 		public ImagePage ()
 		{
 			InitializeComponent ();
-
-            var imageSource = new UriImageSource { Uri = new Uri("https://quidsup.net/wallpaper/abstract/the-cube-1920x1080-wallpaper-5189.jpg") };
-            // disables default (24h) caching on the device
-            imageSource.CachingEnabled = false;
-            // sets the caching that does happen to only cache for 1h
-            imageSource.CacheValidity = TimeSpan.FromHours(1);
-            // bind the imageSource object to the myImage XAML x:name element
-            myImage.Source = imageSource;
-
+            // pulls from local resource (folder 'images' in PCL)
+            myImage.Source = ImageSource.FromResource("myApp.images.troll.jpg");
 		}
 	}
 }
