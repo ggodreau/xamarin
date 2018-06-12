@@ -17,7 +17,6 @@ namespace myApp
 		public ImagePage ()
 		{
 			InitializeComponent ();
-            myClock.Image = (FileImageSource) ImageSource.FromFile(AppConstants.ClockType);
 		}
 	}
 }
