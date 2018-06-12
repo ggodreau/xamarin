@@ -12,10 +12,7 @@ namespace myApp
         private static string GetClockType()
         {
             string clockType;
-            clockType = "clock.png";
-            /*
-            string clockType;
-
+            
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
@@ -25,10 +22,9 @@ namespace myApp
                     clockType = "clock.png"; 
                     break;
                 default:
-                    clockType = "notclock.png";
+                    clockType = "clock.png";
                     break;
             }
-            */
             return clockType;
         }
     }
