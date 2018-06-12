@@ -114,5 +114,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\clock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\troll_icon_72.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
