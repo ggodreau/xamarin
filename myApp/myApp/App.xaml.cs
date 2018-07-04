@@ -9,14 +9,9 @@ namespace myApp
 	{
 		public App ()
 		{
-            // Initialize live reload maybe
-            #if DEBUG
-            LiveReload.Init();
-            #endif
+			InitializeComponent();
 
-            InitializeComponent();
-
-			MainPage = new ImagePage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()

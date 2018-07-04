@@ -11,7 +11,6 @@ namespace myApp
 	{
 		public MainPage()
 		{
-			InitializeComponent();
 		}
 	}
 }
