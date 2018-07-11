@@ -4,11 +4,16 @@
              xmlns:local="clr-namespace:myApp"
              x:Class="myApp.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="Beige">
         <!-- Place new controls here -->
-        <ListView x:Name="myList" 
-                  SeparatorColor="DarkSlateBlue" 
-                  BackgroundColor="MediumSlateBlue"/>
+        <ListView x:Name="myList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}"/>-->
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 
 </ContentPage>
