@@ -4,12 +4,11 @@
              xmlns:local="clr-namespace:myApp"
              x:Class="myApp.MainPage">
 
-    <StackLayout BackgroundColor="BlueViolet">
+    <StackLayout>
         <!-- Place new controls here -->
-    	<Label Text="welcome to xamarin ferms" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Label TextColor="Black">Hello</Label>
+        <ListView x:Name="myList" 
+                  SeparatorColor="DarkSlateBlue" 
+                  BackgroundColor="MediumSlateBlue"/>
     </StackLayout>
 
 </ContentPage>

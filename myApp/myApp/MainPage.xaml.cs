@@ -11,7 +11,17 @@ namespace myApp
 	{
 		public MainPage()
 		{
-            InitializeComponent();
+			InitializeComponent();
+
+            var names = new List<string>
+            {
+                "Greg",
+                "Mosh",
+                "Joyshallow"
+            };
+
+            myList.ItemsSource = names;
+
 		}
 	}
 }
