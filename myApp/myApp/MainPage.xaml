@@ -5,27 +5,16 @@
              x:Class="myApp.MainPage">
 
     <StackLayout BackgroundColor="Beige">
-        <!-- Place new controls here -->
-        <ListView x:Name="myList" BackgroundColor="Black" SeparatorColor="LightPink">
+        <!-- GroupShourtNameBinding for ios only -->
+        <ListView x:Name="myList"
+                  BackgroundColor="BlueViolet" 
+                  SeparatorColor="LightPink"
+                  IsGroupingEnabled="True"
+                  GroupDisplayBinding="{Binding Title}"
+                  GroupShortNameBinding="{Binding ShortTitle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                            <Image Source="{Binding ImageUrl}" HeightRequest="50" WidthRequest="50"/>
-                            <StackLayout Orientation="Vertical" Margin="5, 2, 0, 2">
-                                <Label FontAttributes="Bold" TextColor="LightPink" VerticalOptions="Center" Text="{Binding Name}"/>
-                                <Label FontAttributes="Italic" TextColor="LightPink" VerticalOptions="Center" Text="{Binding Status}"/>
-                            </StackLayout>
-                            <Label 
-                                   HorizontalOptions="FillAndExpand"
-                                   HorizontalTextAlignment="End" 
-                                   VerticalTextAlignment="Center"
-                                   TextColor="LightPink"
-                                   FontAttributes="Bold"
-                                   Margin="0, 0, 10, 0"
-                                   Text="Follow"/>
-                        </StackLayout>
-                    </ViewCell>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Status}" TextColor="WhiteSmoke" DetailColor="WhiteSmoke"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

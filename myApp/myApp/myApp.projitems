@@ -20,5 +20,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)models\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)models\ContactGroup.cs" />
   </ItemGroup>
 </Project>

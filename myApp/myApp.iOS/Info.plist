@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>myApp</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.myApp</string>
+	<string>com.usmedequip.assetmanagement.local</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>

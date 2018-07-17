@@ -99,9 +99,9 @@ Global
 		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhone.ActiveCfg = Release|iPhone
 		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhone.Build.0 = Release|iPhone
 		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhone.Deploy.0 = Release|iPhone
-		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhoneSimulator.ActiveCfg = Release|iPhone
+		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhoneSimulator.Build.0 = Release|iPhone
+		{D392F1A3-3C33-4E11-BD11-599A95FE2DEE}.Release|iPhoneSimulator.Deploy.0 = Release|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
