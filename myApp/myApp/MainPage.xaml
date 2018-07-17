@@ -9,6 +9,8 @@
         <ListView x:Name="myList"
                   BackgroundColor="BlueViolet" 
                   SeparatorColor="LightPink"
+                  ItemTapped="myList_ItemTapped"
+                  ItemSelected="myList_ItemSelected"
                   IsGroupingEnabled="True"
                   GroupDisplayBinding="{Binding Title}"
                   GroupShortNameBinding="{Binding ShortTitle}">
@@ -18,6 +20,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+               Text="itemtapped" x:Name="tap" BackgroundColor="PowderBlue"/>
+        <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+               Text="itemselected" x:Name="sel" BackgroundColor="IndianRed"/>
     </StackLayout>
 
 </ContentPage>

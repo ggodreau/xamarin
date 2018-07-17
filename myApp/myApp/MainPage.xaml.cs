@@ -30,5 +30,25 @@ namespace myApp
                 }
             };
 		}
-	}
+
+        private void myList_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var fuckshit = e.Item as Contact;
+            tap.Text = fuckshit.Name;
+            //DisplayAlert("tapped", fuckshit.Name + myList.IsVisible, "whatever");
+            //for (int i = 0; i < 360; i = i + 10)
+            //{
+            //    myList.Rotation = i;
+            //    System.Threading.Thread.Sleep(30);
+            //}
+            myList.RotationX = 30;
+        }
+
+        private void myList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var fuckshit = e.SelectedItem as Contact;
+            sel.Text = fuckshit.Status;
+            //DisplayAlert("selected", fuckshit.Name, "whatever");
+        }
+    }
 }
