@@ -34,7 +34,6 @@ namespace myApp
         private void myList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var fuckshit = e.Item as Contact;
-            tap.Text = fuckshit.Name;
             //DisplayAlert("tapped", fuckshit.Name + myList.IsVisible, "whatever");
             //for (int i = 0; i < 360; i = i + 10)
             //{
@@ -47,8 +46,17 @@ namespace myApp
         private void myList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var fuckshit = e.SelectedItem as Contact;
-            sel.Text = fuckshit.Status;
             //DisplayAlert("selected", fuckshit.Name, "whatever");
+        }
+
+        private void Call_Clicked(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            DisplayAlert("Call Item", foo.CommandParameter.ToString(), "Yep");
+        }
+        private void Delete_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Call Item", sender.GetType().ToString(), "Yep");
         }
     }
 }

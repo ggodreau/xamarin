@@ -16,14 +16,16 @@
                   GroupShortNameBinding="{Binding ShortTitle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Status}" TextColor="WhiteSmoke" DetailColor="WhiteSmoke"/>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Status}" 
+                              TextColor="WhiteSmoke" DetailColor="WhiteSmoke" x:Name="tc">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}" />
+                            <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}" />
+                        </TextCell.ContextActions>
+                    </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-               Text="itemtapped" x:Name="tap" BackgroundColor="PowderBlue"/>
-        <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
-               Text="itemselected" x:Name="sel" BackgroundColor="IndianRed"/>
     </StackLayout>
 
 </ContentPage>
