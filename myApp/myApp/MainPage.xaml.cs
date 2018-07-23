@@ -13,6 +13,11 @@ namespace myApp
 	{
         private ObservableCollection<Contact> _contacts;
 
+        public void AddContacts(IList<Contact> list)
+        {
+            list.ToList().ForEach(_contacts.Add);
+        }
+
         private void GetContacts()
         {
             _contacts.Add(
@@ -70,10 +75,24 @@ namespace myApp
         private void myList_Refreshing(object sender, EventArgs e)
         {
             GetContacts();
+            AddContacts(new List<Contact>()
+                {
+                new Contact() { ImageUrl = "https://lh5.googleusercontent.com/-8NBn7h8s7eQ/AAAAAAAAAAI/AAAAAAAAAAs/_F1iLsrgmm0/s92-c-k-no/photo.jpg",
+                    Name = "Sue", Status = "Hot" },
+                new Contact() { ImageUrl = "https://lh3.googleusercontent.com/-c5cBgaRl8Og/AAAAAAAAAAI/AAAAAAAAI04/nEPGtW2ofUs/s56-c-k-no/photo.jpg",
+                    Name = "Greg", Status = "Hotter" }
+                });
+
+                
             // System.Threading.Thread.Sleep(3000);
             // DisplayAlert("shits refreshing!", "omg!", "shit!!");
             myList.IsRefreshing = false;
 
+        }
+
+        private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+        {
+            DisplayAlert("results are", e.ToString(), "go awai");
         }
     }
 }
