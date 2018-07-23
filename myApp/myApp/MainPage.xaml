@@ -6,7 +6,7 @@
 
     <StackLayout BackgroundColor="Beige">
         <!-- GroupShourtNameBinding for ios only -->
-        <ListView x:Name="myList">
+        <ListView x:Name="myList" IsPullToRefreshEnabled="True" Refreshing="myList_Refreshing" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}"/>-->

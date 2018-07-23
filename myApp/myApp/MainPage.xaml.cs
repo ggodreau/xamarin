@@ -13,6 +13,13 @@ namespace myApp
 	{
         private ObservableCollection<Contact> _contacts;
 
+        private void GetContacts()
+        {
+            _contacts.Add(
+                new Contact() { ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gregory%26thehawk.jpg/330px-Gregory%26thehawk.jpg",
+                    Name = "Mere", Status = "Lukewarm" });
+        }
+
 		public MainPage()
 		{
 			InitializeComponent();
@@ -58,6 +65,15 @@ namespace myApp
             var contact = (sender as MenuItem).CommandParameter as Contact;
             DisplayAlert("Call Item", contact.Name, "Yep");
             _contacts.Remove(contact);
+        }
+
+        private void myList_Refreshing(object sender, EventArgs e)
+        {
+            GetContacts();
+            // System.Threading.Thread.Sleep(3000);
+            // DisplayAlert("shits refreshing!", "omg!", "shit!!");
+            myList.IsRefreshing = false;
+
         }
     }
 }
