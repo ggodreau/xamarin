@@ -11,7 +11,9 @@ namespace myApp
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            // VERY IMPORTANT - you must wrap your root page
+            // with a new NavigationPage() to have the nav bar
+            MainPage = new NavigationPage(new WelcomePage());
 		}
 
 		protected override void OnStart ()

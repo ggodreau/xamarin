@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myApp.WelcomePage"
+             Title="Welcome">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Welcome to my welcome page!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Button Text="next" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="Button_Clicked" />
+
+            <Frame HorizontalOptions="Fill" 
+                VerticalOptions="Center"
+                HeightRequest="15"
+                Margin="30,15"
+                BackgroundColor="Blue"
+                CornerRadius="10">
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding YourCommand}"/>
+                </Frame.GestureRecognizers>
+
+                <Label Text="you dum." 
+                    TextColor="White" 
+                    FontSize="Micro"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
