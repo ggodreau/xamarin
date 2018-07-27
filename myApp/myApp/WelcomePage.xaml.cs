@@ -12,6 +12,9 @@ namespace myApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class WelcomePage : ContentPage
 	{
+        Boolean _isFlipped = false;
+        double _slideVal;
+
 		public WelcomePage ()
 		{
 			InitializeComponent ();
@@ -20,6 +23,21 @@ namespace myApp
         async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new IntroductionPage(), false);
+        }
+
+        void OnTap(object sender, EventArgs e)
+        {
+            _slideVal = mySlide.Value;
+            if(!_isFlipped)
+            {
+                dum.RotationX = _slideVal;
+                _isFlipped = true;
+                // you need this return here and below
+                return; 
+            }
+            dum.RotationX = 0;
+            _isFlipped = false;
+            return;
         }
     }
 }

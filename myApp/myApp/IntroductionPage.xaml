@@ -12,6 +12,10 @@
                     Clicked="Button_Clicked" 
                     VerticalOptions="Center" 
                     HorizontalOptions="Center"/>
+            <Button Text="Go to NoNavBar Page" 
+                    Clicked="Button_Clicked_1" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

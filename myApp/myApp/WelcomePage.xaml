@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myApp.WelcomePage"
+             NavigationPage.BackButtonTitle="gtfo"
+             
              Title="Welcome">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
@@ -12,20 +14,24 @@
             <Button Text="next" 
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
+                    Rotation="180"
                     Clicked="Button_Clicked" />
+
+            <Slider x:Name="mySlide" Maximum="360" Minimum="-360" />
 
             <Frame HorizontalOptions="Fill" 
                 VerticalOptions="Center"
                 HeightRequest="15"
                 Margin="30,15"
                 BackgroundColor="Blue"
-                CornerRadius="10">
+                CornerRadius="10"
+                x:Name="dum">
 
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding YourCommand}"/>
+                    <TapGestureRecognizer Tapped="OnTap" />
                 </Frame.GestureRecognizers>
 
-                <Label Text="you dum." 
+                <Label Text="still dum." 
                     TextColor="White" 
                     FontSize="Micro"
                     VerticalTextAlignment="Center"

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace myApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class IntroductionPage : ContentPage
+	public partial class NoNavBar : ContentPage
 	{
-		public IntroductionPage ()
+		public NoNavBar ()
 		{
 			InitializeComponent ();
 		}
@@ -22,9 +22,9 @@ namespace myApp
             await Navigation.PopAsync();
         }
 
-        async private void Button_Clicked_1(object sender, EventArgs e)
+        void OnLabelTap(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new NoNavBar());
+            myStack.BackgroundColor = Color.BlueViolet;
         }
     }
 }
