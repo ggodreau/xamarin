@@ -7,7 +7,7 @@
     <StackLayout BackgroundColor="Beige">
         <!-- GroupShourtNameBinding for ios only -->
         <SearchBar CancelButtonColor="Red" SearchButtonPressed="SearchBar_SearchButtonPressed" 
-                   x:Name="mySearch" TextColor="MediumPurple" Placeholder="search me!"/>
+                   x:Name="mySearch" TextColor="MediumPurple" Placeholder="search me!" TextChanged="mySearch_TextChanged"/>
         <ListView x:Name="myList" IsPullToRefreshEnabled="True" Refreshing="myList_Refreshing" >
             <ListView.ItemTemplate>
                 <DataTemplate>

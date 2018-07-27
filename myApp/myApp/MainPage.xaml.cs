@@ -12,17 +12,16 @@ namespace myApp
 	public partial class MainPage : ContentPage
 	{
         private ObservableCollection<Contact> _contacts;
+        private string _searchText;
 
         public void AddContacts(IList<Contact> list)
         {
             list.ToList().ForEach(_contacts.Add);
         }
 
-        private void GetContacts()
+        private void SearchContacts(string searchText = null)
         {
-            _contacts.Add(
-                new Contact() { ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gregory%26thehawk.jpg/330px-Gregory%26thehawk.jpg",
-                    Name = "Mere", Status = "Lukewarm" });
+            myList.ItemsSource = _contacts.Where(b => b.Name.ToUpper().StartsWith(searchText.ToUpper()));
         }
 
 		public MainPage()
@@ -74,7 +73,6 @@ namespace myApp
 
         private void myList_Refreshing(object sender, EventArgs e)
         {
-            GetContacts();
             AddContacts(new List<Contact>()
                 {
                 new Contact() { ImageUrl = "https://lh5.googleusercontent.com/-8NBn7h8s7eQ/AAAAAAAAAAI/AAAAAAAAAAs/_F1iLsrgmm0/s92-c-k-no/photo.jpg",
@@ -92,7 +90,15 @@ namespace myApp
 
         private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
-            DisplayAlert("results are", e.ToString(), "go awai");
+            //DisplayAlert("results are", e.NewTextValue, "go awai");
+            //SearchContacts("Greg");
+            SearchContacts(_searchText);
+        }
+
+        private void mySearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(e.NewTextValue.Length == 0) { myList.ItemsSource = _contacts; }
+            _searchText = e.NewTextValue;
         }
     }
 }
