@@ -16,6 +16,10 @@
                     Clicked="Button_Clicked_1" 
                     VerticalOptions="Center" 
                     HorizontalOptions="Center"/>
+            <Button Text="Go to modal" 
+                    Clicked="Button_Clicked_2" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
