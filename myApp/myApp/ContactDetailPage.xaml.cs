@@ -10,16 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace myApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ModalPage : ContentPage
+	public partial class ContactDetailPage : ContentPage
 	{
-		public ModalPage ()
+		public ContactDetailPage (string name)
 		{
 			InitializeComponent ();
+            nameLabel.Text = name;
 		}
-
-        async private void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
-        }
-    }
+	}
 }
