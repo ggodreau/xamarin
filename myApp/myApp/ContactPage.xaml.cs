@@ -26,7 +26,7 @@ namespace myApp
         async private void TextCell_Tapped(object sender, EventArgs e)
         {
             var contact = ((sender as TextCell).CommandParameter) as Contact;
-            //await DisplayAlert("totle",contact.Name, "foo");
+            listView.SelectedItem = null;
             await Navigation.PushModalAsync(new ContactDetailPage(contact.Name));
         }
     }

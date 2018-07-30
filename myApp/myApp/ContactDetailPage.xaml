@@ -3,13 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myApp.ContactDetailPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+        <StackLayout
+            VerticalOptions="CenterAndExpand">
             <Label 
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
+                FontSize="Large"
                 x:Name="nameLabel" />
         </StackLayout>
     </ContentPage.Content>
