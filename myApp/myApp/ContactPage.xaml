@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="myApp.ContactPage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="MediumSpringGreen">
-            <Label Text="helo wurld" />
+<MasterDetailPage 
+    IsPresented="True"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="myApp.ContactPage">
+    <MasterDetailPage.Master>
+      <ContentPage 
+          BackgroundColor="CornflowerBlue"
+          Title="Contacts">
+            <StackLayout>
+            <Label Text="helo wurlden"/>
             <ListView x:Name="listView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -16,6 +21,22 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+            </StackLayout>
+      </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage/>
+        <!--
+        <ContentPage>
+            <StackLayout
+                VerticalOptions="CenterAndExpand">
+                <Label 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    x:Name="nameLabel" />
+            </StackLayout>
+        </ContentPage>
+        -->
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

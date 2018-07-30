@@ -11,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace myApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ContactPage : ContentPage
+	public partial class ContactPage : MasterDetailPage
 	{
 		public ContactPage ()
 		{
@@ -26,7 +26,7 @@ namespace myApp
         async private void TextCell_Tapped(object sender, EventArgs e)
         {
             var contact = ((sender as TextCell).CommandParameter) as Contact;
-            listView.SelectedItem = null;
+            //listView.SelectedItem = null;
             await Navigation.PushModalAsync(new ContactDetailPage(contact.Name));
         }
     }
