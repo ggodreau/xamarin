@@ -1,19 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:myApp"
              x:Class="myApp.MainPage"
              BackgroundColor="Beige">
-
-    <!-- Note that you can only have content pages and their derivatives in carousel pages. Not Nav pages. -->
-    <ContentPage 
-        Title="PG1"
-        BackgroundColor="CadetBlue">
-        <Label Text="page 1" />
-    </ContentPage>
-    <ContentPage 
-        Title="PG1"
-        BackgroundColor="PaleVioletRed">
-        <Label Text="page 2" />
-    </ContentPage>
-</CarouselPage>
+    <Label Text="click me mothaf***a">
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+        </Label.GestureRecognizers>
+    </Label>
+</ContentPage>
