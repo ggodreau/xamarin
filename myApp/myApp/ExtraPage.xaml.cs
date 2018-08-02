@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace myApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ContactDetailPage : ContentPage
+	public partial class ExtraPage : ContentPage
 	{
-		public ContactDetailPage (string name)
+		public ExtraPage ()
 		{
 			InitializeComponent ();
-            nameLabel.Text = name;
 		}
 	}
 }

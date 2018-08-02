@@ -11,12 +11,7 @@ namespace myApp
 		{
 			InitializeComponent();
 
-            var imgString = new Uri("https://cdn.pixabay.com/photo/2015/05/06/16/31/andromeda-galaxy-755442_1280.jpg");
-            var imgSrc = ImageSource.FromUri(imgString);
-
-            // VERY IMPORTANT - you must wrap your root page
-            // with a new NavigationPage() to have the nav bar
-            MainPage = new ContactPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()

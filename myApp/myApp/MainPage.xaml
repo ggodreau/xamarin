@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:myApp"
+             x:Class="myApp.MainPage">
+    <ContentPage Title="question" BackgroundColor="LightPink">
+        <Label Text="hello world?" />
+    </ContentPage>
+    <!-- this is how you add an extra page-->
+    <local:ExtraPage />
+
+    <!-- this is how you add a nav page -->
+    <NavigationPage Title="exclamation" BackgroundColor="PaleGreen">
+    <!-- the x:Arguments sets the root page of navigation -->
+        <x:Arguments>
+            <ContentPage>
+                <Label Text="hello world!">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
