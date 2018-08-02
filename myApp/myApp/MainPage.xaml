@@ -1,25 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:myApp"
-             x:Class="myApp.MainPage">
-    <ContentPage Title="question" BackgroundColor="LightPink">
-        <Label Text="hello world?" />
-    </ContentPage>
-    <!-- this is how you add an extra page-->
-    <local:ExtraPage />
+             x:Class="myApp.MainPage"
+             BackgroundColor="Beige">
 
-    <!-- this is how you add a nav page -->
-    <NavigationPage Title="exclamation" BackgroundColor="PaleGreen">
-    <!-- the x:Arguments sets the root page of navigation -->
-        <x:Arguments>
-            <ContentPage>
-                <Label Text="hello world!">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                    </Label.GestureRecognizers>
-                </Label>
-            </ContentPage>
-        </x:Arguments>
-    </NavigationPage>
-</TabbedPage>
+    <!-- Note that you can only have content pages and their derivatives in carousel pages. Not Nav pages. -->
+    <ContentPage 
+        Title="PG1"
+        BackgroundColor="CadetBlue">
+        <Label Text="page 1" />
+    </ContentPage>
+    <ContentPage 
+        Title="PG1"
+        BackgroundColor="PaleVioletRed">
+        <Label Text="page 2" />
+    </ContentPage>
+</CarouselPage>
