@@ -27,7 +27,9 @@ namespace myApp
         {
             var contact = ((sender as TextCell).CommandParameter) as Contact;
             //listView.SelectedItem = null;
-            await Navigation.PushModalAsync(new ContactDetailPage(contact.Name));
+            this.Detail = new NavigationPage(new ContactDetailPage(contact.Name));
+            // this.Detail = new ContactDetailPage(contact.Name);
+            // await Navigation.PushAsync(new NavigationPage(new ContactDetailPage(contact.Name)));
         }
     }
 }

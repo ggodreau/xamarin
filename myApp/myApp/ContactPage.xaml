@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- must have IsPresented="True" to display the master page at all -->
 <MasterDetailPage 
     IsPresented="True"
     xmlns="http://xamarin.com/schemas/2014/forms"
@@ -25,7 +26,11 @@
       </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <ContentPage/>
+        <ContentPage>
+            <Label
+                Text="this is my detail yo"
+                Rotation="270" />
+        </ContentPage>
         <!--
         <ContentPage>
             <StackLayout
