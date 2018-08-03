@@ -4,9 +4,24 @@
              xmlns:local="clr-namespace:myApp"
              x:Class="myApp.MainPage"
              BackgroundColor="Beige">
-    <Label Text="click me mothaf***a">
-        <Label.GestureRecognizers>
-            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-        </Label.GestureRecognizers>
-    </Label>
+    <ContentPage.ToolbarItems>
+    <!-- items primary order (on main bar) by default -->
+        <ToolbarItem Text="foo" Activated="ToolbarItem_Activated" />
+        <ToolbarItem Text="primari" Order="Primary"/>
+        <ToolbarItem Text="2ndary" Order="Secondary"/>
+        <ToolbarItem Text="2ndary2" Order="Secondary"/>
+        <ToolbarItem Text="2ndary3" Order="Secondary"/>
+        <ToolbarItem Text="2ndary4" Order="Secondary"/>
+        <ToolbarItem Text="2ndary5" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="CenterAndExpand"
+        BackgroundColor="PowderBlue">
+        <Label Text="go somewheres">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
 </ContentPage>

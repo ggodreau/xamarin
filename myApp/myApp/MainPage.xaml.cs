@@ -14,11 +14,14 @@ namespace myApp
 			InitializeComponent();
 		}
 
+        private void ToolbarItem_Activated(object sender, EventArgs e)
+        {
+            DisplayAlert("toolba", "shits active", "yes it is");
+        }
+
         async private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            var myList = new string[] { "el1", "el2" };
-            string x = await DisplayActionSheet("title", "cancel", "destruct", myList );
-            await DisplayAlert("foo", x, "cancel");
+            await this.Navigation.PushAsync(new SubPage());
         }
     }
 }
