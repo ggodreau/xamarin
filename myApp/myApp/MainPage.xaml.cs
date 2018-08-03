@@ -23,5 +23,10 @@ namespace myApp
         {
             await this.Navigation.PushAsync(new SubPage());
         }
+
+        private void Switch_Toggled(object sender, ToggledEventArgs e)
+        {
+
+        }
     }
 }

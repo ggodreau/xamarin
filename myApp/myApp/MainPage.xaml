@@ -3,25 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:myApp"
              x:Class="myApp.MainPage"
-             BackgroundColor="Beige">
-    <ContentPage.ToolbarItems>
-    <!-- items primary order (on main bar) by default -->
-        <ToolbarItem Text="foo" Activated="ToolbarItem_Activated" />
-        <ToolbarItem Text="primari" Order="Primary"/>
-        <ToolbarItem Text="2ndary" Order="Secondary"/>
-        <ToolbarItem Text="2ndary2" Order="Secondary"/>
-        <ToolbarItem Text="2ndary3" Order="Secondary"/>
-        <ToolbarItem Text="2ndary4" Order="Secondary"/>
-        <ToolbarItem Text="2ndary5" Order="Secondary"/>
-    </ContentPage.ToolbarItems>
-    <StackLayout
-        VerticalOptions="CenterAndExpand"
-        HorizontalOptions="CenterAndExpand"
-        BackgroundColor="PowderBlue">
-        <Label Text="go somewheres">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-            </Label.GestureRecognizers>
-        </Label>
+             BackgroundColor="Black">
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Black">
+        <Switch IsToggled="False" x:Name="keySwitch" BackgroundColor="IndianRed" Toggled="Switch_Toggled" />
+        <Switch IsToggled="False" Scale="2" 
+                BackgroundColor="GreenYellow" 
+                IsVisible="{Binding Source={x:Reference keySwitch}, Path=IsToggled}" />
+        <Switch IsToggled="False" Rotation="270" Scale="3" BackgroundColor="DarkGray" Margin="0, 100, 0, 0" />
     </StackLayout>
 </ContentPage>
