@@ -13,5 +13,21 @@ namespace myApp
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            myLabel.Text = e.NewTextValue;
+        }
+
+        private void editCompleted(object sender, EventArgs e)
+        {
+            myLabel.Text = "edit completed!";
+            myStack.BackgroundColor = Color.Red;
+        }
+
+        private void Entry_Completed(object sender, EventArgs e)
+        {
+            myLabel.Text = "entry completed!";
+        }
+    }
 }

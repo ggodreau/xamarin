@@ -4,16 +4,13 @@
              xmlns:local="clr-namespace:myApp"
              x:Class="myApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Stepper 
-            x:Name="myStepper"
-            Minimum="0" 
-            Maximum="10"
-            Increment="1" 
-            HorizontalOptions="CenterAndExpand"
-            VerticalOptions="CenterAndExpand" />
-        <Label Text="{Binding Source={Reference myStepper}, Path=Value}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+    <StackLayout x:Name="myStack">
+        <Label x:Name="myLabel" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+        <Entry IsPassword="False" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Placeholder="notpassword, chat" Keyboard="Chat" />
+        <Entry IsPassword="False" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Placeholder="notpassword, numeric" Keyboard="Numeric" />
+        <Entry IsPassword="False" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Placeholder="notpassword, plain" Keyboard="Plain" />
+        <Entry IsPassword="True" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Placeholder="yespassword" TextChanged="Entry_TextChanged" Completed="Entry_Completed" BackgroundColor="LightSkyBlue" />
+        <Editor Completed="editCompleted" />
     </StackLayout>
 
 </ContentPage>
