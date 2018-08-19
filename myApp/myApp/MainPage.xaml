@@ -2,48 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:myApp"
-             x:Class="myApp.MainPage"
-             BackgroundColor="Black">
-    <StackLayout 
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="CenterAndExpand"
-        BackgroundColor="Black">
-        <Label
-            Text="Size"
-            BackgroundColor="Black"
-            TextColor="White"
+             x:Class="myApp.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Stepper 
+            x:Name="myStepper"
+            Minimum="0" 
+            Maximum="10"
+            Increment="1" 
             HorizontalOptions="CenterAndExpand"
-            Margin="10, 0, 0, 0" />
-        <Slider 
-            x:Name="mySlider2"
-            Maximum="196"
-            Minimum="4"
-            WidthRequest="250"
-            Margin="5, 0, 5, 30"
-            HorizontalOptions="CenterAndExpand"
-            BackgroundColor="Black"
-            Value="16"/>
-        <Label
-            Text="Rotation"
-            BackgroundColor="Black"
-            TextColor="White"
-            HorizontalOptions="CenterAndExpand"
-            Margin="10, 0, 0, 0" />
-        <Slider 
-            x:Name="mySlider"
-            Minimum="-180"
-            Maximum="180"
-            WidthRequest="250"
-            Margin="5, 0, 5, 30"
-            HorizontalOptions="CenterAndExpand"
-            BackgroundColor="Black"
-            Value="0"/>
-        <Label 
-            Text="{Binding Source={x:Reference mySlider}, Path=Value, StringFormat='{}{0:N0}' }"
-            Rotation="{Binding Source={x:Reference mySlider}, Path=Value}"
-            FontSize="{Binding Source={x:Reference mySlider2}, Path=Value}"
-            BackgroundColor="Black"
-            TextColor="White"
-            HorizontalOptions="CenterAndExpand" />
+            VerticalOptions="CenterAndExpand" />
+        <Label Text="{Binding Source={Reference myStepper}, Path=Value}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
     </StackLayout>
+
 </ContentPage>

@@ -13,20 +13,5 @@ namespace myApp
 		{
 			InitializeComponent();
 		}
-
-        private void ToolbarItem_Activated(object sender, EventArgs e)
-        {
-            DisplayAlert("toolba", "shits active", "yes it is");
-        }
-
-        async private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            await this.Navigation.PushAsync(new SubPage());
-        }
-
-        private void Switch_Toggled(object sender, ToggledEventArgs e)
-        {
-
-        }
-    }
+	}
 }
